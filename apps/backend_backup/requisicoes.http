@@ -1,0 +1,61 @@
+GET http://localhost:4000/ping
+
+// usar 3 jogo da velha para aparecer o botao Send Request
+###
+GET http://localhost:4000/eventos
+
+###
+GET http://localhost:4000/eventos/reuniao-familia-oliveira
+
+###
+GET http://localhost:4000/eventos/602721a2-12cf-4a39-ab6b-6d0a6125ded7
+
+###
+GET http://localhost:4000/eventos/validar/evento-dev-frontend-2025/602721a2-12cf-4a39-ab6b-6d0a6125ded7
+
+###
+POST http://localhost:4000/eventos/acessar
+Content-Type: application/json
+
+{
+    "senha": "familia2024",
+    "id": "b1feaaca-915d-419f-9858-535af9e44d19"
+}
+
+###
+POST http://localhost:4000/eventos/reuniao-familia-oliveira/convidado
+Content-Type: application/json
+
+{
+    "id": "f7f5279c-e271-49e8-b1b2-b2d413f3044e",
+    "nome": "Thiago Gianoni",
+    "email": "teste@teste.com",
+    "confirmado": true,
+    "possuiAcompanhantes": true,
+    "qtdeAcompanhantes": 10
+}
+
+###
+POST http://localhost:4000/eventos
+Content-Type: application/json
+
+{
+    "alias": "semana-formacao-dev",
+    "nome": "Evento Semana Formação.DEV",
+    "data": "2025-12-31T23:00",
+    "local": "São Paulo",
+    "descricao": "Evento de tecnologia",
+    "senha": "frameworks2025",
+    "imagem": "https://www.formacao.dev/assets/img/formacao-dev.png",
+    "imagemBackground": "https://www.formacao.dev/assets/img/formacao-dev-background.png",
+    "publicoEsperado": 1000,
+    "convidados": [
+        {
+            "nome": "Leonardo Leitão",
+            "email": "leonardo@formacao.dev",
+            "confirmado": true,
+            "possuiAcompanhantes": true,
+            "qtdeAcompanhantes": 10
+        }
+    ]
+}
